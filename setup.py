@@ -31,10 +31,10 @@ if sys.argv[-1] == 'genreadme':
 
 try:
     long_description=read('README.rst')
-except FileNotFoundError:
+except:
     try:
         long_description=read('README.md')
-    except FileNotFoundError:
+    except:
         long_description = ""
     
     
