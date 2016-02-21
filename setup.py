@@ -31,10 +31,10 @@ if sys.argv[-1] == 'genreadme':
 
 try:
     long_description=read('README.rst')
-except IOError:
+except (IOError, OSError):
     try:
         long_description=read('README.md')
-    except IOError:
+    except (IOError, OSError):
         long_description = ""
     
     
